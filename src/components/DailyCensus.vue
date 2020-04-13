@@ -10,6 +10,13 @@
       <thead>
         <tr>
           <td></td>
+          <th colspan="4"></th>
+          <th colspan="8"> Not in facility</th>
+         
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
           <th colspan="2">Adult</th>
           <th colspan="2">Juvenile</th>
           <th colspan="2">Workers</th>
@@ -37,7 +44,7 @@
       </thead>
       <tbody>
         <tr>
-          <th scope="row">rcf asdcu</th>
+          <th scope="row">Riverside Correctional Facility Alternative and Special Detention Central Unit</th>
           <td>{{ censusData.asdcuMale }}</td>
           <td>{{ censusData.asdcuFemale }}</td>
           <td>{{ censusData.asdcuMaleJuv }}</td>
@@ -53,7 +60,7 @@
           <td>{{ censusData.asdcuTotal }}</td>
         </tr>
         <tr>
-          <th scope="row">cfcf</th>
+          <th scope="row">Curran-Fromhold Correctional Facility</th>
           <td>{{ censusData.cfcfMale }}</td>
           <td>{{ censusData.cfcfFemale }}</td>
           <td>{{ censusData.cfcfMaleJuv }}</td>
@@ -69,7 +76,7 @@
           <td>{{ censusData.cfcfTotal }}</td>
         </tr>
         <tr>
-          <th scope="row">dc</th>
+          <th scope="row">Detention Center</th>
           <td>{{ censusData.dcMale }}</td>
           <td>{{ censusData.dcFemale }}</td>
           <td>{{ censusData.dcMaleJuv }}</td>
@@ -85,7 +92,7 @@
           <td>{{ censusData.dcTotal }}</td>
         </tr>
         <tr>
-          <th scope="row">dcPhsw</th>
+          <th scope="row">Detention Center Public Health Services Wing</th>
           <td>{{ censusData.dcPhswMale }}</td>
           <td>{{ censusData.dcPhswFemale }}</td>
           <td>{{ censusData.dcPhswMaleJuv }}</td>
@@ -101,7 +108,7 @@
           <td>{{ censusData.dcPhswTotal }}</td>
         </tr>
         <tr>
-          <th scope="row">picc</th>
+          <th scope="row">Philadelphia Industrial Correctional Center</th>
           <td>{{ censusData.piccMale }}</td>
           <td>{{ censusData.piccFemale }}</td>
           <td>{{ censusData.piccMaleJuv }}</td>
@@ -117,7 +124,7 @@
           <td>{{ censusData.piccTotal }}</td>
         </tr>
         <tr>
-          <th scope="row">rcf</th>
+          <th scope="row">Riverside Correctional Facility</th>
           <td>{{ censusData.rcfMale }}</td>
           <td>{{ censusData.rcfFemale }}</td>
           <td>{{ censusData.rcfMaleJuv }}</td>
@@ -133,7 +140,7 @@
           <td>{{ censusData.rcfTotal }}</td>
         </tr>
         <tr>
-          <th scope="row">weekenders</th>
+          <th scope="row">Weekenders</th>
           <td>{{ censusData.weekendersMale }}</td>
           <td>{{ censusData.weekendersFemale }}</td>
           <td>{{ censusData.weekendersMaleJuv }}</td>
@@ -149,20 +156,20 @@
           <td>{{ censusData.weekendersTotal }}</td>
         </tr>
         <tr>
-          <th scope="row">total</th>
-          <td>{{ censusData.pdpInFacilityCountMale }}</td>
-          <td>{{ censusData.pdpInFacilityCountFemale }}</td>
-          <td>{{ censusData.pdpInFacilityCountMaleJuv }}</td>
-          <td>{{ censusData.pdpInFacilityCountFemaleJuv }}</td>
-          <td>{{ censusData.pdpInFacilityCountNifWorkerMale }}</td>
-          <td>{{ censusData.pdpInFacilityCountNifWorkerFemale }}</td>
-          <td>{{ censusData.pdpInFacilityCountNifFurMale }}</td>
-          <td>{{ censusData.pdpInFacilityCountNifFurFemale }}</td>
-          <td>{{ censusData.pdpInFacilityCountNifOwMale }}</td>
-          <td>{{ censusData.pdpInFacilityCountNifOwFemale }}</td>
-          <td>{{ censusData.pdpInFacilityCountNifEtMale }}</td>
-          <td>{{ censusData.pdpInFacilityCountNifEtFemale }}</td>
-          <td>{{ censusData.pdpInFacilityCountTotal }}</td>
+          <th scope="row">PDP "In Facility" Headcount Total</th>
+          <td><strong>{{ censusData.pdpInFacilityCountMale }}</strong></td>
+          <td><strong>{{ censusData.pdpInFacilityCountFemale }}</strong></td>
+          <td><strong>{{ censusData.pdpInFacilityCountMaleJuv }}</strong></td>
+          <td><strong>{{ censusData.pdpInFacilityCountFemaleJuv }}</strong></td>
+          <td><strong>{{ censusData.pdpInFacilityCountNifWorkerMale }}</strong></td>
+          <td><strong>{{ censusData.pdpInFacilityCountNifWorkerFemale }}</strong></td>
+          <td><strong>{{ censusData.pdpInFacilityCountNifFurMale }}</strong></td>
+          <td><strong>{{ censusData.pdpInFacilityCountNifFurFemale }}</strong></td>
+          <td><strong>{{ censusData.pdpInFacilityCountNifOwMale }}</strong></td>
+          <td><strong>{{ censusData.pdpInFacilityCountNifOwFemale }}</strong></td>
+          <td><strong>{{ censusData.pdpInFacilityCountNifEtMale }}</strong></td>
+          <td><strong>{{ censusData.pdpInFacilityCountNifEtFemale }}</strong></td>
+          <td><strong>{{ censusData.pdpInFacilityCountTotal }}</strong></td>
         </tr>
       </tbody>
     </table>
@@ -178,76 +185,76 @@
       </thead>
       <tbody>
         <tr>
-          <th scope="row">pdpInFacilityCount</th>
+          <th scope="row" class="half-width">Adult + Juvenile Total "In Facility" Count</th>
           <td>{{ censusData.pdpInFacilityCountMaleAdultsJuv }}</td>
           <td>{{ censusData.pdpInFacilityCountFemaleAdultsJuv }}</td>
           <td>{{ censusData.pdpInFacilityCountTotalAdultsJuv }}</td>
         </tr>
         <tr>
-          <th scope="row">nif</th>
+          <th scope="row" class="half-width">Not in Facility (NIF) Total</th>
           <td>{{ censusData.nifMale }}</td>
            <td>{{ censusData.nifFemale }}</td>
           <td>{{ censusData.nifTotal }}</td>
         </tr>
          <tr>
-          <th scope="row">pdpHeadcountNif</th>
+          <th scope="row" class="half-width">PDP "In Facility" Headcount + NIF Total</th>
           <td>{{ censusData.pdpHeadcountNifMale }}</td>
            <td>{{ censusData.pdpHeadcountNifFemale }}</td>
           <td>{{ censusData.pdpHeadcountNifTotal }}</td>
         </tr>
          <tr>
-          <th scope="row">oj</th>
+          <th scope="row" class="half-width">Other Jursidictions (OJ) Total</th>
           <td>{{ censusData.ojMale }}</td>
            <td>{{ censusData.ojFemale }}</td>
           <td>{{ censusData.ojTotal }}</td>
         </tr>
          <tr>
-          <th scope="row">pdpHeadcountNifOj</th>
+          <th scope="row" class="half-width">PDP Headcount + NIF + OJ (Census) Total</th>
           <td>{{ censusData.pdpHeadcountNifOjMale }}</td>
            <td>{{ censusData.pdpHeadcountNifOjFemale }}</td>
           <td>{{ censusData.pdpHeadcountNifOjTotal }}</td>
         </tr>
          <tr>
-          <th scope="row">oocStateDoc</th>
+          <th scope="row" class="half-width">State Department of Corrections (DOC)</th>
           <td>{{ censusData.oocStateDocMale }}</td>
            <td>{{ censusData.oocStateDocFemale }}</td>
           <td>{{ censusData.oocStateDocTotal }}</td>
         </tr>
          <tr>
-          <th scope="row">oocJuv</th>
+          <th scope="row" class="half-width">Juveniles</th>
           <td>{{ censusData.oocJuvMale }}</td>
            <td>{{ censusData.oocJuvFemale }}</td>
           <td>{{ censusData.oocJuvTotal }}</td>
         </tr>
          <tr>
-          <th scope="row">oocDel</th>
+          <th scope="row" class="half-width">Delaware County</th>
           <td>{{ censusData.oocDelMale }}</td>
            <td>{{ censusData.oocDelFemale }}</td>
           <td>{{ censusData.oocDelTotal }}</td>
         </tr>
          <tr>
-          <th scope="row">oocLehigh</th>
+          <th scope="row" class="half-width">Lehigh County</th>
           <td>{{ censusData.oocLehighMale }}</td>
            <td>{{ censusData.oocLehighFemale }}</td>
           <td>{{ censusData.oocLehighTotal }}</td>
         </tr>
          <tr>
-          <th scope="row">oocCec</th>
+          <th scope="row" class="half-width">CEC</th>
           <td>{{ censusData.oocCecMale }}</td>
            <td>{{ censusData.oocCecFemale }}</td>
           <td>{{ censusData.oocCecTotal }}</td>
         </tr>
          <tr>
-          <th scope="row">oocRoth</th>
+          <th scope="row" class="half-width">ROTH</th>
           <td>{{ censusData.oocRothMale }}</td>
            <td>{{ censusData.oocRothFemale }}</td>
           <td>{{ censusData.oocRothTotal }}</td>
         </tr>
          <tr>
-          <th scope="row">census</th>
-          <td>{{ censusData.censusMale }}</td>
-           <td>{{ censusData.censusFemale }}</td>
-          <td>{{ censusData.censusTotal }}</td>
+          <th scope="row" class="half-width">Total</th>
+          <td><strong>{{ censusData.censusMale }}</strong></td>
+          <td><strong>{{ censusData.censusFemale }}</strong></td>
+          <td><strong>{{ censusData.censusTotal }}</strong></td>
         </tr>
       </tbody>
     </table>
@@ -299,4 +306,7 @@ export default {
 </script>
 
 <style scoped>
+.half-width {
+  width: 50%;
+}
 </style>
