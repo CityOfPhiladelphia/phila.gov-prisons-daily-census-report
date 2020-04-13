@@ -1,6 +1,5 @@
 <template>
   <div>
-    {{ censusData }}
     <div v-show="loading" class="mtm center">
       <i class="fas fa-spinner fa-spin fa-3x" />
     </div>
