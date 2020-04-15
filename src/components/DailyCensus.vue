@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>Daily census report for {{ censusData.date | rmZero }}</p>
+    <p>Daily census report for {{ censusData.date | toReadableDate }}</p>
     <div v-show="loading" class="mtm center">
       <i class="fas fa-spinner fa-spin fa-3x" />
     </div>
@@ -11,10 +11,10 @@
       <thead>
         <tr>
           <th scope="col">Facility</th>
-          <th scope="col">Male</th>
-          <th scope="col">Female</th>
-          <th scope="col">Male</th>
-          <th scope="col">Female</th>
+          <th scope="col">Adult male</th>
+          <th scope="col">Adult female</th>
+          <th scope="col">Juvenile male</th>
+          <th scope="col">Juvenile female</th>
         </tr>
       </thead>
       <tbody>
@@ -77,7 +77,7 @@
       </tbody>
     </table>
 
-    <h1>NIF</h1>
+    <h1>Not in facility</h1>
     <table v-show="!empty && !loading && !failure">
       <thead>
         <tr>
@@ -183,7 +183,7 @@
         </tr>
       </tbody>
     </table>
-    <h1>IF + NIF totals</h1>
+    <h1>In facility and not in facility totals</h1>
     <table v-show="!empty && !loading && !failure">
       <thead>
         <tr>
@@ -344,6 +344,7 @@
 
 <script>
 import axios from "axios";
+import moment from "moment";
 // import Vue from "vue";
 
 const endpoint =
@@ -371,6 +372,10 @@ export default {
       } else {
         return val;
       }
+    },
+
+    toReadableDate(val) {
+      return moment(val).format('MMMM DD, YYYY')
     }
   },
 
@@ -402,12 +407,12 @@ export default {
 }
 
 .blue-row td {
-  background-color: darkblue;
+  background-color: #0f4d90;
   color: white;
 }
 
 .light-blue-row td {
-  background-color: teal;
+  background-color: #2176d2;
   color: white;
 }
 </style>
