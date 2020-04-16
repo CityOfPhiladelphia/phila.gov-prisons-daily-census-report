@@ -1,13 +1,20 @@
 <template>
   <div>
-    <p>Daily census report for {{ censusData.date | toReadableDate }}</p>
     <div v-show="loading" class="mtm center">
       <i class="fas fa-spinner fa-spin fa-3x" />
     </div>
     <div v-show="!loading && empty" class="h3 mtm center">Sorry, there are no results.</div>
     <div v-show="failure" class="h3 mtm center">Sorry, there was a problem. Please try again.</div>
-    <h1>In Facility</h1>
-    <table v-show="!empty && !loading && !failure">
+    <div v-show="!empty && !loading && !failure">
+    <p>Daily census report for {{ censusData.date | toReadableDate }}</p>
+    <p>anchor links <br>
+     <a href="#if">In Facility </a> <br>
+     <a href="#nif">Not in facility </a> <br>
+     <a href="#ifnif">In facility and not in facility totals </a> <br>
+     <a href="#other">other totals </a>
+    </p>
+    <h1><a name="if">In Facility</a></h1>
+    <table >
       <thead>
         <tr>
           <th scope="col">Facility</th>
@@ -77,7 +84,7 @@
       </tbody>
     </table>
 
-    <h1>Not in facility</h1>
+    <h1><a name="nif">Not in facility</a></h1>
     <table v-show="!empty && !loading && !failure">
       <thead>
         <tr>
@@ -183,7 +190,7 @@
         </tr>
       </tbody>
     </table>
-    <h1>In facility and not in facility totals</h1>
+    <h1><a name="ifnif">In facility and not in facility totals</a></h1>
     <table v-show="!empty && !loading && !failure">
       <thead>
         <tr>
@@ -245,7 +252,7 @@
         </tr>
       </tbody>
     </table>
-    <h1>Other totals?</h1>
+    <h1><a name="other">Other totals</a></h1>
     <table>
       <thead>
         <tr>
@@ -339,13 +346,13 @@
         </tr>
       </tbody>
     </table>
+    </div>
   </div>
 </template>
 
 <script>
 import axios from "axios";
 import moment from "moment";
-// import Vue from "vue";
 
 const endpoint =
   "https://api.phila.gov/inmate-locator/census?gatekeeperKey=c1cfa6750fa0517fbdefeb90a1464004";
@@ -414,5 +421,9 @@ export default {
 .light-blue-row td {
   background-color: #2176d2;
   color: white;
+}
+
+table tr td:not(:first-child) {
+  font-weight: bold;
 }
 </style>
