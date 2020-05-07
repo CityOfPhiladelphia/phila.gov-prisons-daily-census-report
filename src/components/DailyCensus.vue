@@ -28,7 +28,7 @@
     <table >
       <thead>
         <tr>
-          <th scope="col">Facility</th>
+          <th class="half-width" scope="col">Facility</th>
           <th scope="col">Adult males</th>
           <th scope="col">Adult females</th>
           <th scope="col">Juvenile males</th>
@@ -205,7 +205,7 @@
     <table v-show="!empty && !loading && !failure">
       <thead>
         <tr>
-          <th scope="col">Facility</th>
+          <th class="half-width" scope="col">Facility</th>
           <th scope="col">Males</th>
           <th scope="col">Females</th>
           <th scope="col">Total</th>
