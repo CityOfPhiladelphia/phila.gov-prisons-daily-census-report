@@ -324,7 +324,7 @@
         </tr>
       </tbody>
     </table>
-    <h3><div id="other">PDP total population</div></h3>
+    <h3><div id="total">PDP total population</div></h3>
     
     <table>
       <thead>
