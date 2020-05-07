@@ -256,7 +256,7 @@
           <td>{{ censusData.weekendersTotal | rmZero }}</td>
         </tr>
         <tr class="blue-row">
-          <td>PDP "In Facility" Headcount + NIF Total</td>
+          <td>In facility headcount and temporarily not in facility total</td>
           <td>{{ censusData.pdpHeadcountNifMale | rmZero }}</td>
           <td>{{ censusData.pdpHeadcountNifFemale | rmZero }}</td>
           <td>{{ censusData.pdpHeadcountNifTotal | rmZero }}</td>
