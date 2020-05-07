@@ -6,62 +6,73 @@
     <div v-show="!loading && empty" class="h3 mtm center">Sorry, there are no results.</div>
     <div v-show="failure" class="h3 mtm center">Sorry, there was a problem. Please try again.</div>
     <div v-show="!empty && !loading && !failure">
-    <p>Daily census report for {{ censusData.date | toReadableDate }}</p>
-    <p>anchor links <br>
-     <a href="#if">In Facility </a> <br>
-     <a href="#nif">Not in facility </a> <br>
-     <a href="#ifnif">In facility and not in facility totals </a> <br>
-     <a href="#other">other totals </a>
+      <div class="mbxl">
+    <p>Census for: {{ censusData.date | toReadableDate }}</p>
+    <p>The Philadelphia Department of Prisons (PDP) posts a census of its inmates every day. The census includes a headcount of inmates in each facility. In some cases, a facility is responsible for an inmate who is temporarily outside that facility.
     </p>
-    <h1><a name="if">In Facility</a></h1>
+
+     <p> <a href="#if">In Facility </a> - The total number of inmates currently in custody at a PDP facility. These inmates are physically inside each facility. <br> </p>
+     <p><a href="#nif">Temporarily not in facility </a> - The total number of inmates who are usually in a PDP facility, but are temporarily in another location. This includes four categories: workers, furlough, open ward, and emergency trips. 
+<ul>
+<li>Workers are outside the facility itself, but working on campus. </li>
+<li>Furloughs are authorized absences from the facility. </li>
+<li>Open ward inmates have been admitted to a hospital. </li>
+<li>Emergency trips include any inmates who have been taken to the hospital, but not yet admitted. </li>
+</ul>
+</p>
+     <p><a href="#ifnif">PDP facility totals</a>  - The total number of inmates that each facility is responsible for. This includes both inmates in the facility and inmates who are temporarily not in the facility. <br> </p>
+     <p><a href="#other">PDP inmates held in other jurisdictions </a> - The total number of inmates that PDP is responsible for, but are in custody outside of the PDP system. <br> </p>
+     <p><a href="#total"> PDP total population </a> - The grand total of inmates that PDP is responsible for. This includes inmates who are in PDP facilities, temporarily out of PDP facilities, and being held in other jurisdictions.  </p>
+    </div>
+    <h3><div id="if">In Facility</div></h3>
     <table >
       <thead>
         <tr>
           <th scope="col">Facility</th>
-          <th scope="col">Adult male</th>
-          <th scope="col">Adult female</th>
-          <th scope="col">Juvenile male</th>
-          <th scope="col">Juvenile female</th>
+          <th scope="col">Adult males</th>
+          <th scope="col">Adult females</th>
+          <th scope="col">Juvenile males</th>
+          <th scope="col">Juvenile females</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Riverside Correctional Facility Alternative and Special Detention Central Unit</td>
+          <td>Riverside Correctional Facility Alternative and Special Detention Central Unit (RCF ASDCU)</td>
           <td>{{ censusData.asdcuMale | rmZero }}</td>
           <td>{{ censusData.asdcuFemale | rmZero }}</td>
           <td>{{ censusData.asdcuMaleJuv | rmZero }}</td>
           <td>{{ censusData.asdcuFemaleJuv | rmZero }}</td>
         </tr>
         <tr>
-          <td>Curran-Fromhold Correctional Facility</td>
+          <td>Curran-Fromhold Correctional Facility (CFCF)</td>
           <td>{{ censusData.cfcfMale | rmZero }}</td>
           <td>{{ censusData.cfcfFemale | rmZero }}</td>
           <td>{{ censusData.cfcfMaleJuv | rmZero }}</td>
           <td>{{ censusData.cfcfFemaleJuv | rmZero }}</td>
         </tr>
         <tr>
-          <td>Detention Center</td>
+          <td>Detention Center (DC)</td>
           <td>{{ censusData.dcMale | rmZero }}</td>
           <td>{{ censusData.dcFemale | rmZero }}</td>
           <td>{{ censusData.dcMaleJuv | rmZero }}</td>
           <td>{{ censusData.dcFemaleJuv | rmZero }}</td>
         </tr>
         <tr>
-          <td>Detention Center Public Health Services Wing</td>
+          <td>Detention Center Public Health Services Wing (DC PHSW)</td>
           <td>{{ censusData.dcPhswMale | rmZero }}</td>
           <td>{{ censusData.dcPhswFemale | rmZero }}</td>
           <td>{{ censusData.dcPhswMaleJuv | rmZero }}</td>
           <td>{{ censusData.dcPhswFemaleJuv | rmZero }}</td>
         </tr>
         <tr>
-          <td>Philadelphia Industrial Correctional Center</td>
+          <td>Philadelphia Industrial Correctional Center (PICC)</td>
           <td>{{ censusData.piccMale | rmZero }}</td>
           <td>{{ censusData.piccFemale | rmZero }}</td>
           <td>{{ censusData.piccMaleJuv | rmZero }}</td>
           <td>{{ censusData.piccFemaleJuv | rmZero }}</td>
         </tr>
         <tr>
-          <td>Riverside Correctional Facility</td>
+          <td>Riverside Correctional Facility (RCF)</td>
           <td>{{ censusData.rcfMale | rmZero }}</td>
           <td>{{ censusData.rcfFemale | rmZero }}</td>
           <td>{{ censusData.rcfMaleJuv | rmZero }}</td>
@@ -75,7 +86,7 @@
           <td>{{ censusData.weekendersFemaleJuv | rmZero }}</td>
         </tr>
         <tr class="blue-row">
-          <td>PDP "In Facility" Headcount Total</td>
+          <td>In facility headcount total</td>
           <td>{{ censusData.pdpInFacilityCountMale | rmZero }}</td>
           <td>{{ censusData.pdpInFacilityCountFemale | rmZero }}</td>
           <td>{{ censusData.pdpInFacilityCountMaleJuv | rmZero }}</td>
@@ -84,7 +95,7 @@
       </tbody>
     </table>
 
-    <h1><a name="nif">Not in facility</a></h1>
+    <h3><div id="nif">Temporarily not in facility</div></h3>
     <table v-show="!empty && !loading && !failure">
       <thead>
         <tr>
@@ -101,7 +112,7 @@
       </thead>
       <tbody>
         <tr>
-          <td>Riverside Correctional Facility Alternative and Special Detention Central Unit</td>
+          <td>Riverside Correctional Facility Alternative and Special Detention Central Unit (RCF ASDCU)</td>
           <td>{{ censusData.asdcuNifWorkerMale | rmZero }}</td>
           <td>{{ censusData.asdcuNifWorkerFemale | rmZero }}</td>
           <td>{{ censusData.asdcuNifFurMale | rmZero }}</td>
@@ -112,7 +123,7 @@
           <td>{{ censusData.asdcuNifEtFemale | rmZero }}</td>
         </tr>
         <tr>
-          <td>Curran-Fromhold Correctional Facility</td>
+          <td>Curran-Fromhold Correctional Facility (CFCF)</td>
           <td>{{ censusData.cfcfNifWorkerMale | rmZero }}</td>
           <td>{{ censusData.cfcfNifWorkerFemale | rmZero }}</td>
           <td>{{ censusData.cfcfNifFurMale | rmZero }}</td>
@@ -123,7 +134,7 @@
           <td>{{ censusData.cfcfNifEtFemale | rmZero }}</td>
         </tr>
         <tr>
-          <td>Detention Center</td>
+          <td>Detention Center (DC)</td>
           <td>{{ censusData.dcNifWorkerMale | rmZero }}</td>
           <td>{{ censusData.dcNifWorkerFemale | rmZero }}</td>
           <td>{{ censusData.dcNifFurMale | rmZero }}</td>
@@ -134,7 +145,7 @@
           <td>{{ censusData.dcNifEtFemale | rmZero }}</td>
         </tr>
         <tr>
-          <td>Detention Center Public Health Services Wing</td>
+          <td>Detention Center Public Health Services Wing (DC PHSW)</td>
           <td>{{ censusData.dcPhswNifWorkerMale | rmZero }}</td>
           <td>{{ censusData.dcPhswNifWorkerFemale | rmZero }}</td>
           <td>{{ censusData.dcPhswNifFurMale | rmZero }}</td>
@@ -145,7 +156,7 @@
           <td>{{ censusData.dcPhswNifEtFemale | rmZero }}</td>
         </tr>
         <tr>
-          <td>Philadelphia Industrial Correctional Center</td>
+          <td>Philadelphia Industrial Correctional Center (PICC)</td>
           <td>{{ censusData.piccNifWorkerMale | rmZero }}</td>
           <td>{{ censusData.piccNifWorkerFemale | rmZero }}</td>
           <td>{{ censusData.piccNifFurMale | rmZero }}</td>
@@ -156,7 +167,7 @@
           <td>{{ censusData.piccNifEtFemale | rmZero }}</td>
         </tr>
         <tr>
-          <td>Riverside Correctional Facility</td>
+          <td>Riverside Correctional Facility (RCF)</td>
           <td>{{ censusData.rcfNifWorkerMale | rmZero }}</td>
           <td>{{ censusData.rcfNifWorkerFemale | rmZero }}</td>
           <td>{{ censusData.rcfNifFurMale | rmZero }}</td>
@@ -178,7 +189,7 @@
           <td>{{ censusData.weekendersNifEtFemale | rmZero }}</td>
         </tr>
         <tr class="blue-row">
-          <td>PDP "Not In Facility" Headcount Total</td>
+          <td>Temporarily not in facility total</td>
           <td>{{ censusData.pdpInFacilityCountNifWorkerMale | rmZero }}</td>
           <td>{{ censusData.pdpInFacilityCountNifWorkerFemale | rmZero }}</td>
           <td>{{ censusData.pdpInFacilityCountNifFurMale | rmZero }}</td>
@@ -190,49 +201,49 @@
         </tr>
       </tbody>
     </table>
-    <h1><a name="ifnif">In facility and not in facility totals</a></h1>
+    <h3><div id="ifnif">PDP facility totals (both in facility and temporarily not in facility totals)</div></h3>
     <table v-show="!empty && !loading && !failure">
       <thead>
         <tr>
           <th scope="col">Facility</th>
-          <th scope="col">Male</th>
-          <th scope="col">Female</th>
+          <th scope="col">Males</th>
+          <th scope="col">Females</th>
           <th scope="col">Total</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Riverside Correctional Facility Alternative and Special Detention Central Unit</td>
+          <td>Riverside Correctional Facility Alternative and Special Detention Central Unit (RCF ASDCU)</td>
           <td>{{ censusData.asdcuMale + censusData.asdcuMaleJuv + censusData.asdcuNifFurMale + censusData.asdcuNifOwMale + censusData.asdcuNifEtMale | rmZero }}</td>
           <td>{{ censusData.asdcuFemale + censusData.asdcuFemaleJuv + censusData.asdcuNifFurFemale + censusData.asdcuNifOwFemale + censusData.asdcuNifEtFemale | rmZero }}</td>
           <td>{{ censusData.asdcuTotal | rmZero }}</td>
         </tr>
         <tr>
-          <td>Curran-Fromhold Correctional Facility</td>
+          <td>Curran-Fromhold Correctional Facility (CFCF)</td>
           <td>{{ censusData.cfcfMale + censusData.cfcfMaleJuv + censusData.cfcfNifFurMale + censusData.cfcfNifOwMale + censusData.cfcfNifEtMale | rmZero }}</td>
           <td>{{ censusData.cfcfFemale + censusData.cfcfFemaleJuv + censusData.cfcfNifFurFemale + censusData.cfcfNifOwFemale + censusData.cfcfNifEtFemale | rmZero }}</td>
           <td>{{ censusData.cfcfTotal | rmZero }}</td>
         </tr>
         <tr>
-          <td>Detention Center</td>
+          <td>Detention Center (DC)</td>
           <td>{{ censusData.dcMale + censusData.dcMaleJuv + censusData.dcNifFurMale + censusData.dcNifOwMale + censusData.dcNifEtMale | rmZero }}</td>
           <td>{{ censusData.dcFemale + censusData.dcFemaleJuv + censusData.dcNifFurFemale + censusData.dcNifOwFemale + censusData.dcNifEtFemale | rmZero }}</td>
           <td>{{ censusData.dcTotal | rmZero }}</td>
         </tr>
         <tr>
-          <td>Detention Center Public Health Services Wing</td>
+          <td>Detention Center Public Health Services Wing (DC PHSW)</td>
           <td>{{ censusData.dcPhswMale + censusData.dcPhswMaleJuv + censusData.dcPhswNifFurMale + censusData.dcPhswNifOwMale + censusData.dcPhswNifEtMale | rmZero }}</td>
           <td>{{ censusData.dcPhswFemale + censusData.dcPhswFemaleJuv + censusData.dcPhswNifFurFemale + censusData.dcPhswNifOwFemale + censusData.dcPhswNifEtFemale | rmZero }}</td>
           <td>{{ censusData.dcPhswTotal | rmZero }}</td>
         </tr>
         <tr>
-          <td>Philadelphia Industrial Correctional Center</td>
+          <td>Philadelphia Industrial Correctional Center (PICC)</td>
           <td>{{ censusData.piccMale + censusData.piccMaleJuv + censusData.piccNifFurMale + censusData.piccNifOwMale + censusData.piccNifEtMale | rmZero }}</td>
           <td>{{ censusData.piccFemale + censusData.piccFemaleJuv + censusData.piccNifFurFemale + censusData.piccNifOwFemale + censusData.piccNifEtFemale | rmZero }}</td>
           <td>{{ censusData.piccTotal | rmZero }}</td>
         </tr>
         <tr>
-          <td>Riverside Correctional Facility</td>
+          <td>Riverside Correctional Facility (RCF)</td>
 
           <td>{{ censusData.rcfMale + censusData.rcfMaleJuv + censusData.rcfNifFurMale + censusData.rcfNifOwMale + censusData.rcfNifEtMale | rmZero }}</td>
           <td>{{ censusData.rcfFemale + censusData.rcfFemaleJuv + censusData.rcfNifFurFemale + censusData.rcfNifOwFemale + censusData.rcfNifEtFemale | rmZero }}</td>
@@ -252,55 +263,16 @@
         </tr>
       </tbody>
     </table>
-    <h1><a name="other">Other totals</a></h1>
+    <h3><div id="other">PDP inmates held in other jurisdictions</div></h3>
     <table>
       <thead>
         <tr>
-          <th>Location</th>
-          <th>Male</th>
-          <th>Female</th>
-          <th>Total</th>
+          <th scope="col">Jurisdiction</th>
+          <th scope="col">Males</th>
+          <th scope="col">Females</th>
+          <th scope="col">Total</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td class="half-width">Adult + Juvenile Total "In Facility" Count</td>
-          <td>{{ censusData.pdpInFacilityCountMaleAdultsJuv | rmZero }}</td>
-          <td>{{ censusData.pdpInFacilityCountFemaleAdultsJuv | rmZero }}</td>
-          <td>{{ censusData.pdpInFacilityCountTotalAdultsJuv | rmZero }}</td>
-        </tr>
-        <tr>
-          <td class="half-width">Not in Facility (NIF) Total</td>
-          <td>{{ censusData.nifMale | rmZero }}</td>
-          <td>{{ censusData.nifFemale | rmZero }}</td>
-          <td>{{ censusData.nifTotal | rmZero }}</td>
-        </tr>
-        <tr class="light-blue-row">
-          <td class="half-width">PDP "In Facility" Headcount + NIF Total</td>
-          <td>{{ censusData.pdpHeadcountNifMale | rmZero }}</td>
-          <td>{{ censusData.pdpHeadcountNifFemale | rmZero }}</td>
-          <td>{{ censusData.pdpHeadcountNifTotal | rmZero }}</td>
-        </tr>
-      </tbody>
-    </table>
-    <table>
-      <tbody>
-        <tr>
-          <td class="half-width">Other Jursidictions (OJ) Total</td>
-          <td>{{ censusData.ojMale | rmZero }}</td>
-          <td>{{ censusData.ojFemale | rmZero }}</td>
-          <td>{{ censusData.ojTotal | rmZero }}</td>
-        </tr>
-        <tr class="light-blue-row">
-          <td class="half-width">PDP Headcount + NIF + OJ (Census) Total</td>
-          <td>{{ censusData.pdpHeadcountNifOjMale | rmZero }}</td>
-          <td>{{ censusData.pdpHeadcountNifOjFemale | rmZero }}</td>
-          <td>{{ censusData.pdpHeadcountNifOjTotal | rmZero }}</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <table>
       <tbody>
         <tr>
           <td class="half-width">State Department of Corrections (DOC)</td>
@@ -338,6 +310,44 @@
           <td>{{ censusData.oocRothFemale | rmZero }}</td>
           <td>{{ censusData.oocRothTotal | rmZero }}</td>
         </tr>
+        <tr >
+          <td class="half-width">Other jurisdictions</td>
+          <td>{{ censusData.ojMale | rmZero }}</td>
+          <td>{{ censusData.ojFemale | rmZero }}</td>
+          <td>{{ censusData.ojTotal | rmZero }}</td>
+        </tr>
+        <tr class="blue-row">
+          <td class="half-width">Totals</td>
+          <td>{{ censusData.ojMale +  censusData.oocRothMale + censusData.oocCecMale + censusData.oocLehighMale + censusData.oocJuvMale + censusData.oocDelMale +  censusData.oocStateDocMale | rmZero }}</td>
+          <td>{{ censusData.ojFemale +  censusData.oocRothFemale + censusData.oocCecFemale + censusData.oocLehighFemale + censusData.oocJuvFemale + censusData.oocDelFemale +  censusData.oocStateDocFemale | rmZero }}</td>
+          <td>{{ censusData.ojTotal +  censusData.oocRothTotal + censusData.oocCecTotal + censusData.oocLehighTotal + censusData.oocJuvTotal + censusData.oocDelTotal +  censusData.oocStateDocTotal | rmZero }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3><div id="other">PDP total population</div></h3>
+    
+    <table>
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Males</th>
+          <th scope="col">Females</th>
+          <th scope="col">Total</th>
+        </tr>
+      </thead>
+      <tbody>
+       <tr >
+          <td>PDP in facility headcount and temporarily not in facility total</td>
+          <td>{{ censusData.pdpHeadcountNifMale | rmZero }}</td>
+          <td>{{ censusData.pdpHeadcountNifFemale | rmZero }}</td>
+          <td>{{ censusData.pdpHeadcountNifTotal | rmZero }}</td>
+        </tr>
+        <tr >
+          <td class="half-width">Total PDP inmates held in other jurisdictions</td>
+          <td>{{ censusData.ojMale +  censusData.oocRothMale + censusData.oocCecMale + censusData.oocLehighMale + censusData.oocJuvMale + censusData.oocDelMale +  censusData.oocStateDocMale | rmZero }}</td>
+          <td>{{ censusData.ojFemale +  censusData.oocRothFemale + censusData.oocCecFemale + censusData.oocLehighFemale + censusData.oocJuvFemale + censusData.oocDelFemale +  censusData.oocStateDocFemale | rmZero }}</td>
+          <td>{{ censusData.ojTotal +  censusData.oocRothTotal + censusData.oocCecTotal + censusData.oocLehighTotal + censusData.oocJuvTotal + censusData.oocDelTotal +  censusData.oocStateDocTotal | rmZero }}</td>
+        </tr>
         <tr class="blue-row">
           <td class="half-width">Total</td>
           <td>{{ censusData.censusMale | rmZero }}</td>
@@ -347,6 +357,7 @@
       </tbody>
     </table>
     </div>
+    
   </div>
 </template>
 
@@ -375,7 +386,7 @@ export default {
   filters: {
     rmZero(val) {
       if (val === 0) {
-        return "";
+        return "-";
       } else {
         return val;
       }
@@ -425,5 +436,9 @@ export default {
 
 table tr td:not(:first-child) {
   font-weight: bold;
+}
+
+table {
+  margin-bottom: 5rem;
 }
 </style>
