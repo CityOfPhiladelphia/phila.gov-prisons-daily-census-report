@@ -11,8 +11,8 @@
     <p>The Philadelphia Department of Prisons (PDP) posts a census of its inmates every day. The census includes a headcount of inmates in each facility. In some cases, a facility is responsible for an inmate who is temporarily outside that facility.
     </p>
 
-     <p> <a href="#if">In Facility </a> - The total number of inmates currently in custody at a PDP facility. These inmates are physically inside each facility. <br> </p>
-     <p><a href="#nif">Temporarily not in facility </a> - The total number of inmates who are usually in a PDP facility, but are temporarily in another location. This includes four categories: workers, furlough, open ward, and emergency trips. 
+     <p> <a href="#in-facility">In Facility </a> - The total number of inmates currently in custody at a PDP facility. These inmates are physically inside each facility. <br> </p>
+     <p><a href="#not-in-facility">Temporarily not in facility </a> - The total number of inmates who are usually in a PDP facility, but are temporarily in another location. This includes four categories: workers, furlough, open ward, and emergency trips. 
 <ul>
 <li>Workers are outside the facility itself, but working on campus. </li>
 <li>Furloughs are authorized absences from the facility. </li>
@@ -20,11 +20,11 @@
 <li>Emergency trips include any inmates who have been taken to the hospital, but not yet admitted. </li>
 </ul>
 </p>
-     <p><a href="#ifnif">PDP facility totals</a>  - The total number of inmates that each facility is responsible for. This includes both inmates in the facility and inmates who are temporarily not in the facility. <br> </p>
-     <p><a href="#other">PDP inmates held in other jurisdictions </a> - The total number of inmates that PDP is responsible for, but are in custody outside of the PDP system. <br> </p>
+     <p><a href="#in-facility-not-in-facility">PDP facility totals</a>  - The total number of inmates that each facility is responsible for. This includes both inmates in the facility and inmates who are temporarily not in the facility. <br> </p>
+     <p><a href="#other-jurisdictions">PDP inmates held in other jurisdictions </a> - The total number of inmates that PDP is responsible for, but are in custody outside of the PDP system. <br> </p>
      <p><a href="#total"> PDP total population </a> - The grand total of inmates that PDP is responsible for. This includes inmates who are in PDP facilities, temporarily out of PDP facilities, and being held in other jurisdictions.  </p>
     </div>
-    <h3><div id="if">In Facility</div></h3>
+    <h3><div id="in-facility">In Facility</div></h3>
     <table >
       <thead>
         <tr>
@@ -95,7 +95,7 @@
       </tbody>
     </table>
 
-    <h3><div id="nif">Temporarily not in facility</div></h3>
+    <h3><div id="not-in-facility">Temporarily not in facility</div></h3>
     <table v-show="!empty && !loading && !failure">
       <thead>
         <tr>
@@ -201,7 +201,7 @@
         </tr>
       </tbody>
     </table>
-    <h3><div id="ifnif">PDP facility totals (both in facility and temporarily not in facility totals)</div></h3>
+    <h3><div id="in-facility-not-in-facility">PDP facility totals (both in facility and temporarily not in facility totals)</div></h3>
     <table v-show="!empty && !loading && !failure">
       <thead>
         <tr>
@@ -263,7 +263,7 @@
         </tr>
       </tbody>
     </table>
-    <h3><div id="other">PDP inmates held in other jurisdictions</div></h3>
+    <h3><div id="other-jurisdictions">PDP inmates held in other jurisdictions</div></h3>
     <table>
       <thead>
         <tr>
