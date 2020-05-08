@@ -305,7 +305,7 @@
           <td>{{ censusData.ojTotal | rmZero }}</td>
         </tr>
         <tr class="blue-row">
-          <td class="half-width">Totals</td>
+          <td class="half-width">Total</td>
           <td>{{ censusData.ojMale +  censusData.oocRothMale + censusData.oocCecMale + censusData.oocLehighMale + censusData.oocJuvMale + censusData.oocDelMale +  censusData.oocStateDocMale | rmZero }}</td>
           <td>{{ censusData.ojFemale +  censusData.oocRothFemale + censusData.oocCecFemale + censusData.oocLehighFemale + censusData.oocJuvFemale + censusData.oocDelFemale +  censusData.oocStateDocFemale | rmZero }}</td>
           <td>{{ censusData.ojTotal +  censusData.oocRothTotal + censusData.oocCecTotal + censusData.oocLehighTotal + censusData.oocJuvTotal + censusData.oocDelTotal +  censusData.oocStateDocTotal | rmZero }}</td>
