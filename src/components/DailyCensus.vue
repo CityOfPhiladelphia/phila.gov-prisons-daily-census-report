@@ -6,7 +6,7 @@
     <div v-show="!loading && empty" class="h3 mtm center">Sorry, there are no results.</div>
     <div v-show="failure" class="h3 mtm center">Sorry, there was a problem. Please try again.</div>
     <div v-show="!empty && !loading && !failure">
-      <div class="mbxl">
+      <div id="app-content" class="mbxl">
     <p>Census for: {{ censusData.date | toReadableDate }}</p>
     <p>The Philadelphia Department of Prisons (PDP) posts a census of its inmates every day. The census includes a headcount of inmates in each facility. In some cases, a facility is responsible for an inmate who is temporarily outside that facility.
     </p>
@@ -298,20 +298,8 @@
           <td>{{ censusData.oocLehighFemale | rmZero }}</td>
           <td>{{ censusData.oocLehighTotal | rmZero }}</td>
         </tr>
-        <tr>
-          <td class="half-width">CEC</td>
-          <td>{{ censusData.oocCecMale | rmZero }}</td>
-          <td>{{ censusData.oocCecFemale | rmZero }}</td>
-          <td>{{ censusData.oocCecTotal | rmZero }}</td>
-        </tr>
-        <tr>
-          <td class="half-width">ROTH</td>
-          <td>{{ censusData.oocRothMale | rmZero }}</td>
-          <td>{{ censusData.oocRothFemale | rmZero }}</td>
-          <td>{{ censusData.oocRothTotal | rmZero }}</td>
-        </tr>
         <tr >
-          <td class="half-width">Other jurisdictions</td>
+          <td class="half-width">All other jurisdictions</td>
           <td>{{ censusData.ojMale | rmZero }}</td>
           <td>{{ censusData.ojFemale | rmZero }}</td>
           <td>{{ censusData.ojTotal | rmZero }}</td>
@@ -438,7 +426,15 @@ table tr td:not(:first-child) {
   font-weight: bold;
 }
 
+tbody tr td:not(:first-child) {
+  text-align:center;
+}
+
 table {
   margin-bottom: 5rem;
+}
+
+#app-content a {
+  text-decoration: underline;
 }
 </style>
