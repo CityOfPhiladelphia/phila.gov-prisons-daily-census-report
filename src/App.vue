@@ -17,7 +17,7 @@ export default {
 
 <style>
 #vue-app {
-  width: 70rem;
+  /* width: 70rem; */
   margin: 0 auto;
 }
 </style>
