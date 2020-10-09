@@ -44,6 +44,13 @@
           <td>{{ censusData.asdcuFemaleJuv | rmZero }}</td>
         </tr>
         <tr>
+          <td>Riverside Correctional Facility Alternative and Special Detention Modular Unit (RCF ASDMOD3)</td>
+          <td>{{ censusData.mod3AsdcuMale | rmZero }}</td>
+          <td>{{ censusData.mod3AsdcuFemale | rmZero }}</td>
+          <td>{{ censusData.mod3AsdcuMaleJuv | rmZero }}</td>
+          <td>{{ censusData.mod3AsdcuFemaleJuv | rmZero }}</td>
+        </tr>
+        <tr>
           <td>Curran-Fromhold Correctional Facility (CFCF)</td>
           <td>{{ censusData.cfcfMale | rmZero }}</td>
           <td>{{ censusData.cfcfFemale | rmZero }}</td>
@@ -121,6 +128,17 @@
           <td>{{ censusData.asdcuNifOwFemale | rmZero }}</td>
           <td>{{ censusData.asdcuNifEtMale | rmZero }}</td>
           <td>{{ censusData.asdcuNifEtFemale | rmZero }}</td>
+        </tr>
+        <tr>
+          <td>Riverside Correctional Facility Alternative and Special Detention Modular Unit (RCF ASDMOD3)</td>
+          <td>{{ censusData.mod3AsdcuNifWorkerMale | rmZero }}</td>
+          <td>{{ censusData.mod3AsdcuNifWorkerFemale | rmZero }}</td>
+          <td>{{ censusData.mod3AsdcuNifFurMale | rmZero }}</td>
+          <td>{{ censusData.mod3AsdcuNifFurFemale | rmZero }}</td>
+          <td>{{ censusData.mod3AsdcuNifOwMale | rmZero }}</td>
+          <td>{{ censusData.mod3AsdcuNifOwFemale | rmZero }}</td>
+          <td>{{ censusData.mod3AsdcuNifEtMale | rmZero }}</td>
+          <td>{{ censusData.mod3AsdcuNifEtFemale | rmZero }}</td>
         </tr>
         <tr>
           <td>Curran-Fromhold Correctional Facility (CFCF)</td>
@@ -217,6 +235,12 @@
           <td>{{ censusData.asdcuMale + censusData.asdcuMaleJuv + censusData.asdcuNifFurMale + censusData.asdcuNifOwMale + censusData.asdcuNifEtMale | rmZero }}</td>
           <td>{{ censusData.asdcuFemale + censusData.asdcuFemaleJuv + censusData.asdcuNifFurFemale + censusData.asdcuNifOwFemale + censusData.asdcuNifEtFemale | rmZero }}</td>
           <td>{{ censusData.asdcuTotal | rmZero }}</td>
+        </tr>
+        <tr>
+          <td>Riverside Correctional Facility Alternative and Special Detention Modular Unit (RCF ASDMOD3)</td>
+          <td>{{ censusData.mod3AsdcuMale + censusData.mod3AsdcuMaleJuv + censusData.mod3AsdcuNifFurMale + censusData.mod3AsdcuNifOwMale + censusData.mod3AsdcuNifEtMale | rmZero }}</td>
+          <td>{{ censusData.mod3AsdcuFemale + censusData.mod3AsdcuFemaleJuv + censusData.mod3AsdcuNifFurFemale + censusData.mod3AsdcuNifOwFemale + censusData.mod3AsdcuNifEtFemale | rmZero }}</td>
+          <td>{{ censusData.mod3AsdcuTotal | rmZero }}</td>
         </tr>
         <tr>
           <td>Curran-Fromhold Correctional Facility (CFCF)</td>
