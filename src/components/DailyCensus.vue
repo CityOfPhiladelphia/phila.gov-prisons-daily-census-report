@@ -37,20 +37,6 @@
       </thead>
       <tbody>
         <tr>
-          <td>Riverside Correctional Facility Alternative and Special Detention Central Unit (RCF ASDCU)</td>
-          <td>{{ censusData.asdcuMale | rmZero }}</td>
-          <td>{{ censusData.asdcuFemale | rmZero }}</td>
-          <td>{{ censusData.asdcuMaleJuv | rmZero }}</td>
-          <td>{{ censusData.asdcuFemaleJuv | rmZero }}</td>
-        </tr>
-        <tr>
-          <td>Riverside Correctional Facility Alternative and Special Detention Modular Unit (RCF ASDMOD3)</td>
-          <td>{{ censusData.mod3AsdcuMale | rmZero }}</td>
-          <td>{{ censusData.mod3AsdcuFemale | rmZero }}</td>
-          <td>{{ censusData.mod3AsdcuMaleJuv | rmZero }}</td>
-          <td>{{ censusData.mod3AsdcuFemaleJuv | rmZero }}</td>
-        </tr>
-        <tr>
           <td>Curran-Fromhold Correctional Facility (CFCF)</td>
           <td>{{ censusData.cfcfMale | rmZero }}</td>
           <td>{{ censusData.cfcfFemale | rmZero }}</td>
@@ -85,6 +71,20 @@
           <td>{{ censusData.rcfMaleJuv | rmZero }}</td>
           <td>{{ censusData.rcfFemaleJuv | rmZero }}</td>
         </tr>
+         <tr>
+          <td>Riverside Correctional Facility Alternative and Special Detention Central Unit (RCF ASDCU)</td>
+          <td>{{ censusData.asdcuMale | rmZero }}</td>
+          <td>{{ censusData.asdcuFemale | rmZero }}</td>
+          <td>{{ censusData.asdcuMaleJuv | rmZero }}</td>
+          <td>{{ censusData.asdcuFemaleJuv | rmZero }}</td>
+        </tr>
+        <tr>
+          <td>Riverside Correctional Facility Alternative and Special Detention Modular Unit (RCF ASDMOD3)</td>
+          <td>{{ censusData.mod3AsdcuMale | rmZero }}</td>
+          <td>{{ censusData.mod3AsdcuFemale | rmZero }}</td>
+          <td>{{ censusData.mod3AsdcuMaleJuv | rmZero }}</td>
+          <td>{{ censusData.mod3AsdcuFemaleJuv | rmZero }}</td>
+        </tr>
         <tr>
           <td>Weekenders</td>
           <td>{{ censusData.weekendersMale | rmZero }}</td>
@@ -118,28 +118,6 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Riverside Correctional Facility Alternative and Special Detention Central Unit (RCF ASDCU)</td>
-          <td>{{ censusData.asdcuNifWorkerMale | rmZero }}</td>
-          <td>{{ censusData.asdcuNifWorkerFemale | rmZero }}</td>
-          <td>{{ censusData.asdcuNifFurMale | rmZero }}</td>
-          <td>{{ censusData.asdcuNifFurFemale | rmZero }}</td>
-          <td>{{ censusData.asdcuNifOwMale | rmZero }}</td>
-          <td>{{ censusData.asdcuNifOwFemale | rmZero }}</td>
-          <td>{{ censusData.asdcuNifEtMale | rmZero }}</td>
-          <td>{{ censusData.asdcuNifEtFemale | rmZero }}</td>
-        </tr>
-        <tr>
-          <td>Riverside Correctional Facility Alternative and Special Detention Modular Unit (RCF ASDMOD3)</td>
-          <td>{{ censusData.mod3AsdcuNifWorkerMale | rmZero }}</td>
-          <td>{{ censusData.mod3AsdcuNifWorkerFemale | rmZero }}</td>
-          <td>{{ censusData.mod3AsdcuNifFurMale | rmZero }}</td>
-          <td>{{ censusData.mod3AsdcuNifFurFemale | rmZero }}</td>
-          <td>{{ censusData.mod3AsdcuNifOwMale | rmZero }}</td>
-          <td>{{ censusData.mod3AsdcuNifOwFemale | rmZero }}</td>
-          <td>{{ censusData.mod3AsdcuNifEtMale | rmZero }}</td>
-          <td>{{ censusData.mod3AsdcuNifEtFemale | rmZero }}</td>
-        </tr>
         <tr>
           <td>Curran-Fromhold Correctional Facility (CFCF)</td>
           <td>{{ censusData.cfcfNifWorkerMale | rmZero }}</td>
@@ -196,6 +174,28 @@
           <td>{{ censusData.rcfNifEtFemale | rmZero }}</td>
         </tr>
         <tr>
+          <td>Riverside Correctional Facility Alternative and Special Detention Central Unit (RCF ASDCU)</td>
+          <td>{{ censusData.asdcuNifWorkerMale | rmZero }}</td>
+          <td>{{ censusData.asdcuNifWorkerFemale | rmZero }}</td>
+          <td>{{ censusData.asdcuNifFurMale | rmZero }}</td>
+          <td>{{ censusData.asdcuNifFurFemale | rmZero }}</td>
+          <td>{{ censusData.asdcuNifOwMale | rmZero }}</td>
+          <td>{{ censusData.asdcuNifOwFemale | rmZero }}</td>
+          <td>{{ censusData.asdcuNifEtMale | rmZero }}</td>
+          <td>{{ censusData.asdcuNifEtFemale | rmZero }}</td>
+        </tr>
+        <tr>
+          <td>Riverside Correctional Facility Alternative and Special Detention Modular Unit (RCF ASDMOD3)</td>
+          <td>{{ censusData.mod3AsdcuNifWorkerMale | rmZero }}</td>
+          <td>{{ censusData.mod3AsdcuNifWorkerFemale | rmZero }}</td>
+          <td>{{ censusData.mod3AsdcuNifFurMale | rmZero }}</td>
+          <td>{{ censusData.mod3AsdcuNifFurFemale | rmZero }}</td>
+          <td>{{ censusData.mod3AsdcuNifOwMale | rmZero }}</td>
+          <td>{{ censusData.mod3AsdcuNifOwFemale | rmZero }}</td>
+          <td>{{ censusData.mod3AsdcuNifEtMale | rmZero }}</td>
+          <td>{{ censusData.mod3AsdcuNifEtFemale | rmZero }}</td>
+        </tr>
+        <tr>
           <td>Weekenders</td>
           <td>{{ censusData.weekendersNifWorkerMale | rmZero }}</td>
           <td>{{ censusData.weekendersNifWorkerFemale | rmZero }}</td>
@@ -231,18 +231,6 @@
       </thead>
       <tbody>
         <tr>
-          <td>Riverside Correctional Facility Alternative and Special Detention Central Unit (RCF ASDCU)</td>
-          <td>{{ censusData.asdcuMale + censusData.asdcuMaleJuv + censusData.asdcuNifFurMale + censusData.asdcuNifOwMale + censusData.asdcuNifEtMale | rmZero }}</td>
-          <td>{{ censusData.asdcuFemale + censusData.asdcuFemaleJuv + censusData.asdcuNifFurFemale + censusData.asdcuNifOwFemale + censusData.asdcuNifEtFemale | rmZero }}</td>
-          <td>{{ censusData.asdcuTotal | rmZero }}</td>
-        </tr>
-        <tr>
-          <td>Riverside Correctional Facility Alternative and Special Detention Modular Unit (RCF ASDMOD3)</td>
-          <td>{{ censusData.mod3AsdcuMale + censusData.mod3AsdcuMaleJuv + censusData.mod3AsdcuNifFurMale + censusData.mod3AsdcuNifOwMale + censusData.mod3AsdcuNifEtMale | rmZero }}</td>
-          <td>{{ censusData.mod3AsdcuFemale + censusData.mod3AsdcuFemaleJuv + censusData.mod3AsdcuNifFurFemale + censusData.mod3AsdcuNifOwFemale + censusData.mod3AsdcuNifEtFemale | rmZero }}</td>
-          <td>{{ censusData.mod3AsdcuTotal | rmZero }}</td>
-        </tr>
-        <tr>
           <td>Curran-Fromhold Correctional Facility (CFCF)</td>
           <td>{{ censusData.cfcfMale + censusData.cfcfMaleJuv + censusData.cfcfNifFurMale + censusData.cfcfNifOwMale + censusData.cfcfNifEtMale | rmZero }}</td>
           <td>{{ censusData.cfcfFemale + censusData.cfcfFemaleJuv + censusData.cfcfNifFurFemale + censusData.cfcfNifOwFemale + censusData.cfcfNifEtFemale | rmZero }}</td>
@@ -268,10 +256,21 @@
         </tr>
         <tr>
           <td>Riverside Correctional Facility (RCF)</td>
-
           <td>{{ censusData.rcfMale + censusData.rcfMaleJuv + censusData.rcfNifFurMale + censusData.rcfNifOwMale + censusData.rcfNifEtMale | rmZero }}</td>
           <td>{{ censusData.rcfFemale + censusData.rcfFemaleJuv + censusData.rcfNifFurFemale + censusData.rcfNifOwFemale + censusData.rcfNifEtFemale | rmZero }}</td>
           <td>{{ censusData.rcfTotal | rmZero }}</td>
+        </tr>
+        <tr>
+          <td>Riverside Correctional Facility Alternative and Special Detention Central Unit (RCF ASDCU)</td>
+          <td>{{ censusData.asdcuMale + censusData.asdcuMaleJuv + censusData.asdcuNifFurMale + censusData.asdcuNifOwMale + censusData.asdcuNifEtMale | rmZero }}</td>
+          <td>{{ censusData.asdcuFemale + censusData.asdcuFemaleJuv + censusData.asdcuNifFurFemale + censusData.asdcuNifOwFemale + censusData.asdcuNifEtFemale | rmZero }}</td>
+          <td>{{ censusData.asdcuTotal | rmZero }}</td>
+        </tr>
+        <tr>
+          <td>Riverside Correctional Facility Alternative and Special Detention Modular Unit (RCF ASDMOD3)</td>
+          <td>{{ censusData.mod3AsdcuMale + censusData.mod3AsdcuMaleJuv + censusData.mod3AsdcuNifFurMale + censusData.mod3AsdcuNifOwMale + censusData.mod3AsdcuNifEtMale | rmZero }}</td>
+          <td>{{ censusData.mod3AsdcuFemale + censusData.mod3AsdcuFemaleJuv + censusData.mod3AsdcuNifFurFemale + censusData.mod3AsdcuNifOwFemale + censusData.mod3AsdcuNifEtFemale | rmZero }}</td>
+          <td>{{ censusData.mod3AsdcuTotal | rmZero }}</td>
         </tr>
         <tr>
           <td>Weekenders</td>
