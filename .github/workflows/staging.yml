@@ -2,7 +2,7 @@ name: Deploy to s3
 on:
   push:
     branches:
-      - main
+      - staging
 jobs:
   build:
     name: Build files
@@ -25,4 +25,4 @@ jobs:
             AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
             AWS_DEFAULT_REGION: 'us-east-1'
         run: 
-          aws s3 cp dist s3://philagov-vue-apps/prisons-daily-census-report --recursive # change it
+          aws s3 cp dist s3://philagov-vue-apps/prisons-daily-census-report/staging --recursive # change it
